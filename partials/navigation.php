@@ -1,5 +1,5 @@
 <?php
-$navigation = ["tabulka","zjavenie","kalkulacka"];
+$navigation = ["tabulka","zjavenie","kalkulacka","clickmebaby"];
 $current_page =  basename($_SERVER['REQUEST_URI'],".php");
  ?>
 <nav class="navbar navbar-default">

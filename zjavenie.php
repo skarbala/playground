@@ -7,8 +7,8 @@
     <div class="container">
         <div class="row">
             <h2>Zjavenie</h2>
-            <button id="showHim" class="btn btn-success">ukaz mi</button>
-            <button id="hideHim" class= "btn btn-danger">prec s diablom</button>
+            <button id="showHim" class="btn btn-success btn-lg btn-block">ukaz mi</button>
+            <button id="hideHim" class= "btn btn-danger btn-lg btn-block">prec s diablom</button>
             <div class="row">
                 <img style="display: none" src="img/brano.jpg" alt="brano" class="brano">
             </div>
