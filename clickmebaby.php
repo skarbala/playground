@@ -36,6 +36,7 @@
         transition: box-shadow .1s ease-in-out;
 
     }
+
     button:focus {
         outline: none;
     }
@@ -57,7 +58,7 @@
         <button id="clickMe">Click me !</button>
     </div>
     <div class="row text-center">
-        <h1 style ="font-size: 60px" id="clicks">0</h1>
+        <h1 style="font-size: 60px" id="clicks">0</h1>
         <p class="description">klikov</p>
     </div>
 </div>
@@ -67,12 +68,13 @@
     $(document).ready(function () {
         $("#clickMe").click(function () {
             $("#clicks").text(++clicks);
-            if (clicks==1){
+            if (clicks == 1) {
                 $(".description").text("klik");
             }
-            if (clicks==2||clicks==3||clicks==4){
+            if (clicks == 2 || clicks == 3 || clicks == 4) {
                 $(".description").text("kliky");
-            }if (clicks>4){
+            }
+            if (clicks > 4) {
                 $(".description").text("klikov");
             }
         })

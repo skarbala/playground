@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php include 'partials/head.php'; ?>
+
 <body>
     <?php include 'partials/navigation.php' ?>
     <div class="container">
@@ -23,7 +24,7 @@ document.getElementById("spocitaj").onclick = function spocitaj() {
     var firstNumber = parseInt(document.getElementById('prvyInput').value);
     var sceondNumber = parseInt(document.getElementById('druhyInput').value);
     document.getElementById("vysledok").value = firstNumber + sceondNumber;
-}
+};
 
 document.getElementById("odpocitaj").onclick = function spocitaj() {
     var firstNumber = parseInt(document.getElementById('prvyInput').value);

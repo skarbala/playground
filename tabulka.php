@@ -1,57 +1,62 @@
+<?php
+$rows = rand(1,100);
+$meno = ["Martin", "Florian", "Fero","Vendelin","Andrej","Peter","Pavol","Alojz","Patrik"];
+$priezvisko = ["Premrdal", "Toth", "Herák","Bihary","Vyhonský","Šuška","Adamec","Obsust","Plesivec"];
+
+function getRandomNumber(){
+    return rand(100000,999999);
+}
+?>
 <!DOCTYPE html>
 <html>
 <?php include 'partials/head.php'; ?>
-
+<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+<style>
+    body {
+        background-color: #EEEFF7;
+    }
+    *{
+        color: #31353D;
+    }
+    button{
+        background-color: #92CDCF;
+    }
+    h1{
+        font-family: Montserrat,serif;
+        font-size: 50px;
+    }
+</style>
 <body>
 <?php include 'partials/navigation.php' ?>
-
-    <div class="container">
-
-        <div class="row">
-            <h2 class="text-center">Tabulka</h2>
-            <button class="btn" id="addColumn">Pridaj riadok</button>
-            <button class="btn" id="addFiveColumns">Pridaj 5 riadkov</button>
-            <button class="btn" id="addHundredColumns">Pridaj 100 riadkov</button>
-            <table class="table">
-                <thead>
-                    <th>Id</th>
-                    <th>Meno</th>
-                    <th>Priezvisko</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Matko</td>
-                        <td>Skarbala</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
+<div class="container">
+  <h1 class="text-center">Nahodna tabulka</h1>
+    <div class="row">
+        <table class="table table-striped table-hover" >
+            <thead>
+            <th>Id</th>
+            <th>Meno</th>
+            <th>Priezvisko</th>
+            <th>Cislo</th>
+            </thead>
+            <tbody>
+            <?php for ($i=1; $i < $rows+1; $i++) {
+            echo "<tr>";
+              echo "<td>";
+              echo $i;
+                 echo "</td>";
+              echo  "<td>";
+              echo $meno[array_rand($meno)];
+              echo "</td>";
+              echo "<td>";
+              echo $priezvisko[array_rand($priezvisko)];
+              echo "</td>";
+              echo "<td>";
+              echo getRandomNumber();
+              echo "</td>";
+              echo"</tr>";
+             } ?>
+            </tbody>
+        </table>
+    </div>
 </body>
-<script>
-$(document).ready(function() {
-    $('#addColumn').click(function() {
-        addRow();
-    });
-
-    $('#addFiveColumns').click(function() {
-        for (var i = 0; i < 5; i++) {
-            addRow();
-        }
-    });
-    $('#addHundredColumns').click(function() {
-        for (var i = 0; i < 100; i++) {
-            addRow();
-        }
-    });
-});
-
-function addRow() {
-    var current = $('.table tr:last td:first').text();
-    var next = parseInt(current) + 1;
-    $('.table').append("<tr><td>" + next + "</td><td>Jan</td><td>Hus</td></tr>");
-}
-</script>
-
 </html>

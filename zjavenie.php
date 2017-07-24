@@ -18,7 +18,7 @@
 <script>
 $(document).ready(function() {
     $("#showHim").click(function() {
-        $(".brano").fadeIn(500);
+        $(".brano").delay(1500).fadeIn(1500);
     });
      $("#hideHim").click(function() {
         $(".brano").fadeOut(500);
