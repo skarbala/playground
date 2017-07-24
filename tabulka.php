@@ -6,8 +6,12 @@
 <?php include 'partials/navigation.php' ?>
 
     <div class="container">
+
         <div class="row">
             <h2>Tabulka</h2>
+            <button class="btn" id="addColumn">Pridaj riadok</button>
+            <button class="btn" id="addFiveColumns">Pridaj 5 riadkov</button>
+            <button class="btn" id="addHundredColumns">Pridaj 100 riadkov</button>
             <table class="table">
                 <thead>
                     <th>Id</th>
@@ -22,17 +26,7 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn" id="addColumn">Pridaj riadok</button>
-            <button class="btn" id="addFiveColumns">Pridaj 5 riadkov</button>
-            <select name="" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
+
         </div>
 </body>
 <script>
@@ -45,7 +39,12 @@ $(document).ready(function() {
         for (var i = 0; i < 5; i++) {
             addRow();
         }
-    })
+    });
+    $('#addHundredColumns').click(function() {
+        for (var i = 0; i < 100; i++) {
+            addRow();
+        }
+    });
 });
 
 function addRow() {

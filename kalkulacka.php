@@ -7,11 +7,11 @@
         <div class="row">
             <h2 class= "text-center">Kalkulacka</h2>
             <div class="col-md-6 col-md-offset-3">
-                <div class="form-inline">
+                <div >
                     <input type="text" class="form-control" id="prvyInput" placeholder="prve cislo">
                     <input type="text" class="form-control" id="druhyInput" placeholder="druhe cislo">
-                    <button id="spocitaj" class="btn btn-success">Spocitaj</button>
-                    <button id="odpocitaj" class="btn btn-danger">Odpocitaj</button>
+                        <button id="spocitaj" class="btn btn-success btn-block">Spocitaj</button>
+                        <button id="odpocitaj" class="btn btn-danger btn-block">Odpocitaj</button>
                 </div>
                 <input type="text" class="form-control" id="vysledok" placeholder="vysledok">
             </div>
