@@ -1,5 +1,5 @@
 <?php
-$navigation = ["click me baby", "tabulka", "zjavenie", "kalkulacka","vyber si"];
+$navigation = ["click me baby", "vyber si","tabulka", "zjavenie", "kalkulacka"];
 $current_page = basename($_SERVER['REQUEST_URI'], ".php");
 
 function makeLink($link)
