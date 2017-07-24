@@ -8,7 +8,7 @@
     <div class="container">
 
         <div class="row">
-            <h2>Tabulka</h2>
+            <h2 class="text-center">Tabulka</h2>
             <button class="btn" id="addColumn">Pridaj riadok</button>
             <button class="btn" id="addFiveColumns">Pridaj 5 riadkov</button>
             <button class="btn" id="addHundredColumns">Pridaj 100 riadkov</button>
