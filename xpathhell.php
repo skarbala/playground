@@ -4,14 +4,14 @@
 <body>
 <?php include 'partials/navigation.php' ?>
 <style>
-    div.col-md-8, select{
-        margin-bottom:20px;
+    div.col-md-8, select {
+        margin-bottom: 20px;
     }
 
 </style>
 <div class="container">
     <h1 class="text-center">Xpath training center</h1>
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2 button-group">
         <button class="btn">
             First one
         </button>
@@ -60,8 +60,12 @@
     </div>
     <div class="col-md-8 col-md-offset-2">
         <div>
-            <div>
-                <input type="text"></div>
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                <button class="btn btn-danger" type="button">Hit me!</button>
+                </span>
+            </div>
         </div>
     </div>
     <div class="col-md-8 col-md-offset-2">
@@ -70,14 +74,18 @@
                 <label for="output" class=" control-label">Vysledok</label>
                 <textarea class="form-control" rows="10" id="output">
                 </textarea>
+            </div>
         </div>
     </div>
-</div>
 </body>
 <script>
     $(document).ready(function () {
-        $("button").click(function () {
-            $("#output").val("You clicked " +$(this).text().trim());
+        $("div.button-group button").click(function () {
+            $("#output").val("You clicked " + $(this).text().trim());
+        });
+
+        $("select").change(function () {
+            $("#output").val("You have chosen " + $(this).find(":selected").text())
         });
 
     })
