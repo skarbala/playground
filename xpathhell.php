@@ -8,6 +8,10 @@
         margin-bottom: 20px;
     }
 
+    body{
+        background: url("img/gplaypattern.png");
+    }
+
 </style>
 <div class="container">
     <h1 class="text-center">Xpath training center</h1>

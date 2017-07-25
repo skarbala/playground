@@ -12,6 +12,9 @@
     div.container {
         margin-top: 10%
     }
+    body{
+        background: url("img/gplaypattern.png");
+    }
 </style>
 
 <body>

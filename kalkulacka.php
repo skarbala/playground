@@ -9,6 +9,9 @@
     button.btn {
         margin-bottom: 20px;
     }
+    body{
+        background: url("img/gplaypattern.png");
+    }
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>

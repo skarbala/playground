@@ -30,6 +30,7 @@ function getRandomNumber()
         font-family: Montserrat, serif;
         font-size: 50px;
     }
+
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
