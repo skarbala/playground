@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html>
 <?php include 'partials/head.php'; ?>
+<style>
+    input {
+        margin-bottom: 10px;
+    }
 
+    button.btn {
+        margin-bottom: 20px;
+    }
+</style>
 <body>
-    <?php include 'partials/navigation.php' ?>
-    <div class="container">
-        <div class="row">
-            <h2 class= "text-center">Kalkulacka</h2>
-            <div class="col-md-6 col-md-offset-3">
-                <div >
+<?php include 'partials/navigation.php' ?>
+<div class="container">
+    <div class="row">
+        <h2 class="text-center">Kalkulacka</h2>
+        <div class="col-md-6 col-md-offset-3">
+            <div>
+                <div>
                     <input type="text" class="form-control" id="prvyInput" placeholder="prve cislo">
-                    <input type="text" class="form-control" id="druhyInput" placeholder="druhe cislo">
-                        <button id="spocitaj" class="btn btn-success btn-block">Spocitaj</button>
-                        <button id="odpocitaj" class="btn btn-danger btn-block">Odpocitaj</button>
                 </div>
-                <input type="text" class="form-control" id="vysledok" placeholder="vysledok">
+                <div>
+                    <input type="text" class="form-control" id="druhyInput" placeholder="druhe cislo">
+                </div>
+                <button id="spocitaj" class="btn btn-success col-md-6">Spocitaj</button>
+                <button id="odpocitaj" class="btn btn-danger col-md-6">Odpocitaj</button>
             </div>
+            <input type="text" class="form-control" id="vysledok" placeholder="vysledok">
         </div>
     </div>
+</div>
 </body>
 <script>
-document.getElementById("spocitaj").onclick = function spocitaj() {
-    var firstNumber = parseInt(document.getElementById('prvyInput').value);
-    var sceondNumber = parseInt(document.getElementById('druhyInput').value);
-    document.getElementById("vysledok").value = firstNumber + sceondNumber;
-};
+    $(document).ready(function () {
 
-document.getElementById("odpocitaj").onclick = function spocitaj() {
-    var firstNumber = parseInt(document.getElementById('prvyInput').value);
-    var sceondNumber = parseInt(document.getElementById('druhyInput').value);
-    document.getElementById("vysledok").value = firstNumber - sceondNumber;
+        function validateInput() {
+            var prvyInput = $("#prvyInput");
+            if (!$.isNumeric(prvyInput.val())) {
+                $(prvyInput).parent().addClass("has-error");
+                return false;
+            }
+            $(prvyInput).parent().removeClass("has-error");
+            return true;
+        }
 
-}
+        function validateSecondInput() {
+            var druhyInput = $("#druhyInput");
+            if (!$.isNumeric(druhyInput.val())) {
+                $(druhyInput).parent().addClass("has-error");
+                return false;
+            }
+            $(druhyInput).parent().removeClass("has-error");
+            return true;
+        }
+
+        $("#spocitaj").click(function () {
+            validateInput();
+            validateSecondInput();
+            if (validateInput() && validateSecondInput()) {
+                $("#vysledok").val(parseInt($("#prvyInput").val()) + parseInt($("#druhyInput").val()));
+            }
+        });
+
+        $("#odpocitaj").click(function () {
+            validateInput();
+            validateSecondInput();
+            if (validateInput() && validateSecondInput()) {
+                $("#vysledok").val(parseInt($("#prvyInput").val()) - parseInt($("#druhyInput").val()));
+            }
+        });
+
+    });
+
 </script>
 
 </html>
