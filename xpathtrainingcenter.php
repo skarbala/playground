@@ -67,7 +67,7 @@
             <div class="input-group">
                 <input type="text" class="form-control">
                 <span class="input-group-btn">
-                <button class="btn btn-danger" type="button">Hit me!</button>
+                <button class="btn btn-danger" type="button" id="hitme">Hit me!</button>
                 </span>
             </div>
         </div>
@@ -75,8 +75,7 @@
     <div class="col-md-8 col-md-offset-2">
         <div>
             <div>
-                <label for="output" class=" control-label">Vysledok</label>
-                <textarea class="form-control" rows="10" id="output">
+                <h2 id="output"></h2>
                 </textarea>
             </div>
         </div>
@@ -85,13 +84,16 @@
 <script>
     $(document).ready(function () {
         $("div.button-group button").click(function () {
-            $("#output").val("You clicked " + $(this).text().trim());
+            $("#output").text("You clicked " + $(this).text().trim());
         });
 
         $("select").change(function () {
-            $("#output").val("You have chosen " + $(this).find(":selected").text())
+            $("#output").text("You have chosen " + $(this).find(":selected").text())
         });
 
+        $("#hitme").click(function () {
+            $("#output").text("You have typed " + $(this).parent().parent().find("input").val())
+        });
     })
 
 </script>
