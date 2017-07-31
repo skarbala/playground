@@ -65,15 +65,12 @@
         donald.draggable();
 
         var treePosition = $("#tree").position();
-        var left = Math.ceil(treePosition.left);
-        var top = Math.ceil(treePosition.top);
 
         donald.mouseup(function () {
             var position = donald.position();
-            var donaldLeft = Math.ceil(position.left);
-            var donaldTop = Math.ceil(position.top);
             var dirSuccess = $("div.success");
-            if ((Math.abs(left - donaldLeft) < 100) && (Math.abs(top - donaldTop) < 50)) {
+
+            if ((Math.abs(treePosition.left - position.left) < 100) && (Math.abs(treePosition.top - position.top) < 50)) {
                 dirSuccess.html("<h2>Who hooooo</h2>");
             } else {
                 dirSuccess.html("");
