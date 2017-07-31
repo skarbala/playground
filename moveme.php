@@ -6,16 +6,16 @@
 
 <style>
     h1 {
-        font-family: Luckiest Guy, sans-serif;
-        text-transform: uppercase;
         font-size: 50px;
-        color: #fff;
     }
 
     h2 {
+        font-size: 25px;
+    }
+
+    h1, h2 {
         font-family: Luckiest Guy, sans-serif;
         text-transform: uppercase;
-        font-size: 25px;
         color: #fff;
     }
 
