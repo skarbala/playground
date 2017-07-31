@@ -36,11 +36,13 @@
         top: 180px;
         left: 10%;
     }
-    div.success{
+
+    div.success {
         margin-top: 150px;
 
     }
-    div.success h2{
+
+    div.success h2 {
         font-size: 120px;
     }
 
@@ -59,19 +61,22 @@
 </body>
 <script>
     $(document).ready(function () {
+        var donald = $("#donald");
+        donald.draggable();
+
         var treePosition = $("#tree").position();
         var left = Math.ceil(treePosition.left);
         var top = Math.ceil(treePosition.top);
-        $("#donald").draggable();
 
-        $("#donald").mouseup(function () {
-            var position = $("#donald").position();
+        donald.mouseup(function () {
+            var position = donald.position();
             var donaldLeft = Math.ceil(position.left);
-            var donaldTop =  Math.ceil(position.top);
-            if ((Math.abs(left - donaldLeft)< 100) && (Math.abs(top- donaldTop)<50)){
-                $("div.success").html("<h2>Who hooooo</h2>");
-            }else{
-                $("div.success").html("");
+            var donaldTop = Math.ceil(position.top);
+            var dirSuccess = $("div.success");
+            if ((Math.abs(left - donaldLeft) < 100) && (Math.abs(top - donaldTop) < 50)) {
+                dirSuccess.html("<h2>Who hooooo</h2>");
+            } else {
+                dirSuccess.html("");
             }
         });
 
