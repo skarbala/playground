@@ -10,15 +10,15 @@
     }
 
     img {
-        margin-top: 50px;
-        max-width: 800px;
+        margin-top: 30px;
+        max-width: 700px;
         -webkit-box-shadow: 0px 0px 179px -19px rgba(0, 0, 0, 0.45);
         -moz-box-shadow: 0px 0px 179px -19px rgba(0, 0, 0, 0.45);
         box-shadow: 0px 0px 179px -19px rgba(0, 0, 0, 0.45);
     }
 
     label {
-        font-size: 30px;
+        font-size: 20px;
         margin: 20px;
 
     }
@@ -28,7 +28,7 @@
     }
 
     h1.description {
-        font-size: 60px;
+        font-size: 50px;
     }
 
 </style>
