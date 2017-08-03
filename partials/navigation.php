@@ -3,12 +3,15 @@ $navigation = [
     "click me baby",
     "vyber si",
     "tabulka",
+    "red alert",
     "zjavenie",
     "kalkulacka",
     "xpath training center",
     "zena alebo muz",
     "registracia",
-    "move me","stroop effect"];
+    "move me",
+    "stroop effect"
+    ];
 $current_page = basename($_SERVER['REQUEST_URI'], ".php");
 
 function makeLink($link)

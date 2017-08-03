@@ -9,6 +9,9 @@
         font-family: Luckiest Guy, sans-serif;
         text-transform: uppercase;
     }
+    h1{
+        font-size: 50px;
+    }
     h2 {
         font-size: 20px;
     }
