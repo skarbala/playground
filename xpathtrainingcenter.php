@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"><?php include 'partials/head.php'; ?>
+<link href="https://fonts.googleapis.com/css?family=Exo:700" rel="stylesheet">
+<?php include 'partials/head.php'; ?>
 <body>
 <?php include 'partials/navigation.php' ?>
 <style>
     div.col-md-8, select {
         margin-bottom: 20px;
     }
-
+    h1{
+        font: 50px Exo;
+        padding-bottom: 30px;
+    }
     body{
-        background: url("img/gplaypattern.png");
+        background: url("img/project_papper.png");
     }
 
 </style>
