@@ -62,20 +62,20 @@
             <div class="useless-number-two">
                 <select name="" id="" class="form-control">
                     <option value="">vyber si moznost</option>
-                    <option value="1">Moznost 1</option>
-                    <option value="2">Moznost 2</option>
-                    <option value="3">Moznost 3</option>
-                    <option value="4">Moznost 5</option>
-                    <option value="5">Moznost 4</option>
-                    <option value="6">Moznost 6</option>
+                    <option data-attr="1">Moznost 1</option>
+                    <option data-attr="2">Moznost 2</option>
+                    <option data-attr="3">Moznost 3</option>
+                    <option data-attr="4">Moznost 4</option>
+                    <option data-attr="5">Moznost 5</option>
+                    <option data-attr="6">Moznost 6</option>
                 </select>
                 <select name="" id="" class="form-control second-select">
                     <option value="">vyber si option</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
-                    <option value="4">Option 5</option>
-                    <option value="5">Option 4</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
                     <option value="6">Option 6</option>
                 </select>
             </div>
