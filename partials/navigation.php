@@ -11,7 +11,7 @@ $navigation = [
     "registracia",
     "move me",
     "stroop effect",
-    "disabled",
+    "nemenne",
     ];
 $current_page = basename($_SERVER['REQUEST_URI'], ".php");
 
