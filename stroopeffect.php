@@ -5,12 +5,15 @@
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
 <style>
+    body{
+        background: url("img/light_wool.png");
+    }
     h1, h2 {
         font-family: Luckiest Guy, sans-serif;
         text-transform: uppercase;
     }
     h1{
-        font-size: 50px;
+        font-size: 60px;
     }
     h2 {
         font-size: 20px;
