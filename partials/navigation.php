@@ -10,7 +10,8 @@ $navigation = [
     "zena alebo muz",
     "registracia",
     "move me",
-    "stroop effect"
+    "stroop effect",
+    "disabled",
     ];
 $current_page = basename($_SERVER['REQUEST_URI'], ".php");
 
