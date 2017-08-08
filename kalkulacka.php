@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php include 'partials/head.php'; ?>
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
 <style>
     input {
         margin-bottom: 10px;
@@ -9,27 +11,50 @@
     button.btn {
         margin-bottom: 20px;
     }
-    body{
-        background: url("img/gplaypattern.png");
+
+    body {
+        background-color: #fdfdfd;
     }
+
+    h1 {
+        font-family: 'Press Start 2P', serif;
+        font-size: 40px;
+        margin-bottom: 50px;
+        color: #4d4d4d;
+        text-shadow: 2px 2px 1px #a3a4a6;
+    }
+
+    button.btn, input.form-control {
+        border-radius: 0;
+    }
+
+    button.btn {
+        margin: 0;
+    }
+
+    #result {
+        margin: 30px 0;
+    }
+
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
 <div class="container">
     <div class="row">
-        <h2 class="text-center">Kalkulacka</h2>
+        <h1 class="text-center">Kalkulacka</h1>
         <div class="col-md-6 col-md-offset-3">
             <div>
                 <div>
-                    <input type="text" class="form-control" id="prvyInput" placeholder="prve cislo">
+                    <input type="text" class="form-control" id="firstInput" placeholder="prve cislo">
                 </div>
                 <div>
-                    <input type="text" class="form-control" id="druhyInput" placeholder="druhe cislo">
+                    <input type="text" class="form-control" id="secondInput" placeholder="druhe cislo">
                 </div>
-                <button id="spocitaj" class="btn btn-success col-md-6">Spocitaj</button>
-                <button id="odpocitaj" class="btn btn-danger col-md-6">Odpocitaj</button>
+                <button id="count" class="btn btn-success btn-block">Spocitaj</button>
+                <button id="deduct" class="btn btn-danger btn-block">Odpocitaj</button>
+                <button id="reset" class="btn btn-default btn-block">Vynuluj</button>
             </div>
-            <input type="text" class="form-control" id="vysledok" placeholder="vysledok">
+            <h1 class="text-center" id="result"></h1>
         </div>
     </div>
 </div>
@@ -38,41 +63,46 @@
     $(document).ready(function () {
 
         function validateInput() {
-            var prvyInput = $("#prvyInput");
-            if (!$.isNumeric(prvyInput.val())) {
-                $(prvyInput).parent().addClass("has-error");
+            var firstInput = $("#firstInput");
+            if (!$.isNumeric(firstInput.val())) {
+                $(firstInput).parent().addClass("has-error");
                 return false;
             }
-            $(prvyInput).parent().removeClass("has-error");
+            $(firstInput).parent().removeClass("has-error");
             return true;
         }
 
         function validateSecondInput() {
-            var druhyInput = $("#druhyInput");
-            if (!$.isNumeric(druhyInput.val())) {
-                $(druhyInput).parent().addClass("has-error");
+            var secondInput = $("#secondInput");
+            if (!$.isNumeric(secondInput.val())) {
+                $(secondInput).parent().addClass("has-error");
                 return false;
             }
-            $(druhyInput).parent().removeClass("has-error");
+            $(secondInput).parent().removeClass("has-error");
             return true;
         }
 
-        $("#spocitaj").click(function () {
+        $("#count").click(function () {
             validateInput();
             validateSecondInput();
             if (validateInput() && validateSecondInput()) {
-                $("#vysledok").val(parseInt($("#prvyInput").val()) + parseInt($("#druhyInput").val()));
+                $("#result").text(parseInt($("#firstInput").val()) + parseInt($("#secondInput").val()));
             }
         });
 
-        $("#odpocitaj").click(function () {
+        $("#deduct").click(function () {
             validateInput();
             validateSecondInput();
             if (validateInput() && validateSecondInput()) {
-                $("#vysledok").val(parseInt($("#prvyInput").val()) - parseInt($("#druhyInput").val()));
+                $("#result").text(parseInt($("#firstInput").val()) - parseInt($("#secondInput").val()));
             }
         });
 
+        $("#reset").click(function () {
+            $("#firstInput").val("");
+            $("#secondInput").val("");
+            $("#result").text("");
+        });
     });
 
 </script>

@@ -6,28 +6,33 @@
 <style>
     h1{
         font-family: Permanent Marker, sans-serif;
-        font-size: 50px;
+        font-size: 70px;
+        margin-bottom: 60px;
     }
     #hideHim{
         display: none;
     }
-    img{
-        margin: 20px auto;
-        display: block;
-        width: auto;
+    img.brano{
+        margin:0 auto 20px auto;
+        display: none;
+        width:100%;
+
     }
     button.btn{
-        border-radius: 0px;
+        border-radius: 0;
+    }
+    body{
+        background-color: #f6f6f6;
     }
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
     <div class="container">
         <h1 class ="text-center">Zjavenie</h1>
-        <div class="row col-md-8 col-md-offset-2">
-            <button id="showHim" class="btn btn-default btn-lg btn-block">ukaz mi</button>
-                <img style="display: none" src="img/brano.jpg" alt="brano" class="brano">
-            <button id="hideHim" class= "btn btn-lg btn-danger btn-block">prec s diablom !!!</button>
+        <div class=" col-md-10 col-md-offset-1">
+            <img src="img/brano.jpg" alt="brano" class="brano">
+            <button id="showHim" class="btn btn-default btn-lg btn-block btn-warning">BUD ODVAZNY</button>
+            <button id="hideHim" class= "btn btn-lg btn-danger btn-block">PREC S DIABLOM !!!</button>
         </div>
     </div>
 </body>

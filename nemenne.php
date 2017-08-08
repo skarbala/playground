@@ -8,6 +8,9 @@
         font-family: Montserrat, serif;
         margin-bottom: 50px;
     }
+    body{
+        background-color: #f6f6f6;
+    }
 
 </style>
 

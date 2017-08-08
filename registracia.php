@@ -63,6 +63,9 @@ function registration_result(){
 <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
 
 <style>
+    body{
+        background-color: #f6f6f6;
+    }
     div.result {
         margin-top: 20px;
     }
