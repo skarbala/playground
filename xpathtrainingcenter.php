@@ -8,11 +8,17 @@
     div.col-md-8, select {
         margin-bottom: 20px;
     }
-    h1{
+
+    h1 {
         font: 50px Exo;
         padding-bottom: 30px;
     }
-    body{
+
+    h2 {
+        font: 30px Exo;
+    }
+
+    body {
         background: url("img/project_papper.png");
     }
 
@@ -43,8 +49,8 @@
         </button>
     </div>
     <div class="col-md-8 col-md-offset-2">
-        <div>
-            <div>
+        <div class="useless">
+            <div class="useless-number-two">
                 <select name="" id="" class="form-control">
                     <option value="">vyber si moznost</option>
                     <option value="1">Moznost 1</option>
@@ -80,7 +86,6 @@
         <div>
             <div>
                 <h2 id="output"></h2>
-                </textarea>
             </div>
         </div>
     </div>
@@ -96,7 +101,7 @@
         });
 
         $("#hitme").click(function () {
-            $("#output").text("You have typed " + $(this).parent().parent().find("input").val())
+            $("#output").text("You entered " + $(this).parent().parent().find("input").val())
         });
     })
 
