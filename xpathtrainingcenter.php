@@ -119,19 +119,21 @@
         }
     }
     $(document).ready(function () {
+        var action = $("div.output h2 span");
+        var xpath = $("div.output h3 span");
         $("div.button-group button").click(function () {
-            $("div.output h2 span").text("You clicked " + $(this).text().trim());
-            $("div.output h3 span").text("html/"+getPathTo($(this).first().get(0)));
+            action.text("You clicked " + $(this).text().trim());
+            xpath.text("html/" + getPathTo($(this).first().get(0)));
         });
 
         $("select").change(function () {
-            $("div.output h2 span").text("You have chosen " + $(this).find(":selected").text());
-            $("div.output h3 span").text("html/"+getPathTo($(this).find(":selected").first().get(0)));
+            action.text("You have chosen " + $(this).find(":selected").text());
+            xpath.text("html/" + getPathTo($(this).find(":selected").first().get(0)));
         });
 
         $("#hitme").click(function () {
-            $("div.output h2 span").text("You entered " + $(this).parent().parent().find("input").val());
-            $("div.output h3 span").text("html/"+getPathTo($(this).parent().parent().find("input").first().get(0)))
+            action.text("You entered " + $(this).parent().parent().find("input").val());
+            xpath.text("html/" + getPathTo($(this).parent().parent().find("input").first().get(0)))
         });
     })
 
