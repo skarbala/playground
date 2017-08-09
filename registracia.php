@@ -19,12 +19,13 @@ function validate_password()
 {
     global $password;
     global $password_repeat;
+    
     if ($_POST) {
         if (strlen($password) < 5 || ($password != $password_repeat)) {
             return true;
         }
-        return false;
     }
+    return false;
 }
 
 function validate_empty($input)
@@ -167,11 +168,6 @@ function registration_result()
     div.checkbox {
         color: #818181;
     }
-   #checkbox.has-error{
-        border:2px red;
-    }
-
-
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
@@ -196,7 +192,7 @@ function registration_result()
                 <input type="password" class="form-control" name="password-repeat" placeholder="Heslo znovu">
             </div>
             <div class="checkbox form-group">
-                <input id="checkbox" name="robot" type="checkbox" required>
+                <input id="checkbox" name="robot" type="checkbox" class="checkbox" required>
                 <label for="checkbox">
                     Som robot
                 </label>
