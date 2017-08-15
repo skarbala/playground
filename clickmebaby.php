@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"><?php include 'partials/head.php'; ?>
-<body>
-<?php include 'partials/navigation.php' ?>
 <style>
     h1 {
         font-family: Lobster two, Arial, serif;
@@ -52,6 +50,9 @@
     }
 
 </style>
+<body>
+<?php include 'partials/navigation.php' ?>
+
 <div class="container">
     <h1 class="text-center">Click me baby one more time</h1>
     <div class="row">
@@ -63,6 +64,7 @@
     </div>
 </div>
 </body>
+
 <script>
     var clicks = 0;
     $(document).ready(function () {
