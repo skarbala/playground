@@ -71,7 +71,7 @@
             var dirSuccess = $("div.success");
 
             if ((Math.abs(treePosition.left - position.left) < 100) && (Math.abs(treePosition.top - position.top) < 50)) {
-                dirSuccess.html("<h2>Who hooooo</h2>");
+                dirSuccess.html("<h2>Hooo hooooo !!!!</h2>");
             } else {
                 dirSuccess.html("");
             }
