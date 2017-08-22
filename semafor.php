@@ -31,7 +31,7 @@
 <?php include 'partials/navigation.php' ?>
 
 <div class="container text-center">
-    <h1>Red light - Green light</h1>
+    <h1>SeMaFor</h1>
     <div class="light"></div>
 </div>
 </body>
