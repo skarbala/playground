@@ -22,6 +22,10 @@
     div.light:hover{
         background-color: rgba(10, 129, 0,1);
     }
+    div.light:active{
+        background-color: rgb(191, 111, 7);
+
+    }
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
