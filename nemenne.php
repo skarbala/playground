@@ -35,9 +35,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="sel1" class="col-sm-2 control-label">Vek</label>
+                <label for="sel2" class="col-sm-2 control-label">Vek</label>
                 <div class="col-sm-10">
-                    <select class="form-control" id="sel1">
+                    <select class="form-control" id="sel2">
                         <option disabled>40-50</option>
                         <option disabled>50-60</option>
                         <option>194+</option>
