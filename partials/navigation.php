@@ -12,6 +12,7 @@ $navigation = [
     "move me",
     "stroop effect",
     "nemenne",
+    "semafor",
     ];
 $current_page = basename($_SERVER['REQUEST_URI'], ".php");
 
