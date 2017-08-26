@@ -29,7 +29,7 @@
 <?php include 'partials/navigation.php' ?>
     <div class="container">
         <h1 class ="text-center">Zjavenie</h1>
-        <div class=" col-md-10 col-md-offset-1">
+        <div class=" col-md-8 col-md-offset-2">
             <img src="img/brano.jpg" alt="brano" class="brano">
             <button id="showHim" class="btn btn-default btn-lg btn-block btn-warning">BUD ODVAZNY</button>
             <button id="hideHim" class= "btn btn-lg btn-danger btn-block">PREC S DIABLOM !!!</button>
