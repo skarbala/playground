@@ -41,17 +41,17 @@
 <?php include 'partials/navigation.php' ?>
 <div class="container">
     <div class="row">
-        <h1 class="text-center">Kalkulacka</h1>
+        <h1 class="text-center">Kalkulačka</h1>
         <div class="col-md-6 col-md-offset-3">
             <div>
                 <div>
-                    <input type="text" class="form-control" id="firstInput" placeholder="prve cislo">
+                    <input type="text" class="form-control" id="firstInput" placeholder="prvé číslo">
                 </div>
                 <div>
-                    <input type="text" class="form-control" id="secondInput" placeholder="druhe cislo">
+                    <input type="text" class="form-control" id="secondInput" placeholder="druhé číslo">
                 </div>
-                <button id="count" class="btn btn-success btn-block">Spocitaj</button>
-                <button id="deduct" class="btn btn-danger btn-block">Odpocitaj</button>
+                <button id="count" class="btn btn-success btn-block">Spočítaj</button>
+                <button id="deduct" class="btn btn-danger btn-block">Odpočítaj</button>
                 <button id="reset" class="btn btn-default btn-block">Vynuluj</button>
             </div>
             <h1 class="text-center" id="result"></h1>
