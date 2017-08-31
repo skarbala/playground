@@ -31,7 +31,7 @@ function validate_password()
 function validate_empty($input)
 {
     if ($_POST) {
-        return empty($input);
+        return empty(trim($input));
     }
     return false;
 }
@@ -42,7 +42,7 @@ function validate()
     global $robot;
 
     foreach ($_POST as $key) {
-        if (empty($key)) {
+        if (empty(trim($key))) {
             return false;
         }
     }
