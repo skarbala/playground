@@ -99,8 +99,8 @@
         });
 
         $("#reset").click(function () {
-            $("#firstInput").val("");
-            $("#secondInput").val("");
+            $("#firstInput").val("").parent().removeClass("has-error");
+            $("#secondInput").val("").parent().removeClass("has-error");
             $("#result").text("");
         });
     });
