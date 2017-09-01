@@ -122,8 +122,8 @@ function registration_result()
             <div class="form-group <? echo validate_password() ? "has-error" : ""; ?>">
                 <input type="password" class="form-control" name="password-repeat" placeholder="Heslo znovu">
             </div>
-            <div class="checkbox form-group">
-                 <label><input id="checkbox" name="robot" type="checkbox" class="checkbox" required>Som robot</label>
+            <div class="checkbox form-group <? echo validate_empty($robot) ? "has-error" : ""; ?>">
+                 <label><input id="checkbox" name="robot" type="checkbox" class="checkbox">Som robot</label>
             </div>
             <button type="submit" class="btn btn-success btn-lg btn-block">Registruj sa</button>
         </form>
