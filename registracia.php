@@ -96,75 +96,6 @@ function registration_result()
         border: 1px solid;
         border-color: #dfdfdf #eeeeee #eeeeee #dfdfdf;
     }
-
-    .checkbox {
-        padding-left: 20px;
-    }
-
-    .checkbox label {
-        display: inline-block;
-        position: relative;
-        padding-left: 5px;
-    }
-
-    .checkbox label::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 17px;
-        height: 17px;
-        left: 0;
-        margin-left: -20px;
-        border: 1px solid #cccccc;
-        border-radius: 3px;
-        background-color: #fff;
-        -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-        -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-        transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-    }
-
-    .checkbox label::after {
-        display: inline-block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        left: 0;
-        top: 0;
-        margin-left: -20px;
-        padding-left: 3px;
-        padding-top: 1px;
-        font-size: 11px;
-        color: #555555;
-    }
-
-    .checkbox input[type="checkbox"] {
-        opacity: 0;
-    }
-
-    .checkbox input[type="checkbox"]:focus + label::before {
-        outline: thin dotted;
-        outline: 5px auto -webkit-focus-ring-color;
-        outline-offset: -2px;
-    }
-
-    .checkbox input[type="checkbox"]:checked + label::after {
-        font-family: 'FontAwesome';
-        content: "\f00c";
-    }
-
-    .checkbox input[type="checkbox"]:disabled + label {
-        opacity: 0.65;
-    }
-
-    .checkbox input[type="checkbox"]:disabled + label::before {
-        background-color: #eeeeee;
-        cursor: not-allowed;
-    }
-
-    .checkbox.checkbox-circle label::before {
-        border-radius: 50%;
-    }
-
     div.checkbox {
         color: #818181;
     }
@@ -192,10 +123,7 @@ function registration_result()
                 <input type="password" class="form-control" name="password-repeat" placeholder="Heslo znovu">
             </div>
             <div class="checkbox form-group">
-                <input id="checkbox" name="robot" type="checkbox" class="checkbox" required>
-                <label for="checkbox">
-                    Som robot
-                </label>
+                 <label><input id="checkbox" name="robot" type="checkbox" class="checkbox" required>Som robot</label>
             </div>
             <button type="submit" class="btn btn-success btn-lg btn-block">Registruj sa</button>
         </form>
