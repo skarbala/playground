@@ -58,7 +58,7 @@
   <h1 class="text-center">Click me baby one more time</h1>
   <div class="row">
   </div>
-  <button v-on:click="counter += 1">Click me !</button>
+  <button v-on:click="addClick">Click me !</button>
   <div class="row text-center">
     <h1 style="font-size: 60px" id="clicks">{{counter}}</h1>
     <div class="description">
@@ -75,6 +75,11 @@
         el: '.container',
         data: {
             counter: 0
+        },
+        methods: {
+            addClick: function () {
+                this.counter += 1;
+            }
         }
     });
 
