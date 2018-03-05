@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <!--suppress ALL -->
 <html>
-<?php include 'partials/head.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:500i" rel="stylesheet">
+<?php include 'partials/head.php'; ?>
 <style>
-    body {
-        background: url("img/pokemon/background.jpg") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    h1{
-        margin-bottom: 30px;
-    }
+  body {
+    background: url("img/pokemon/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-    h1,h3 {
-        font-family: Roboto, sans-serif;
-        font-size: 70px;
-        color:#FFFFFF;
-        text-shadow: 3px 3px 2px #68696b;
-    }
+  h1 {
+    margin-bottom: 30px;
+  }
 
+  h1, h3 {
+    font-family: Roboto, sans-serif;
+    font-size: 70px;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 2px #68696b;
+  }
 
-    div.pokemon {
-        margin-top: 50px;
-    }
+  div.pokemon {
+    margin-top: 50px;
+  }
 
-    select {
-        margin-top: 30px;
-    }
+  select {
+    margin-top: 30px;
+  }
 
 </style>
 <body>
 <?php include 'partials/navigation.php' ?>
 <div class="container">
-    <h1 class="text-center">Select 'em all!</h1>
-    <div class="col-md-6 col-md-offset-3">
-        <select class="form-control">
-            <option value="">select your pokemon</option>
-            <option value="01">Charmander</option>
-            <option value="02">Bulbasaur</option>
-            <option value="03">Squirtle</option>
-            <option value="04">Pikachu</option>
-            <option value="05">Diglett</option>
-            <option value="06">Geodude</option>
-        </select>
-    </div>
-    <div class="col-md-10 col-md-offset-1 pokemon text-center">
-    </div>
+  <h1 class="text-center">Select 'em all!</h1>
+  <div class="col-md-6 col-md-offset-3">
+    <select class="form-control" v-model="selected">
+      <option disabled value="">Please select one</option>
+      <option v-for="option in options" v-bind:value="option">{{option.text}}</option>
+    </select>
+  </div>
+  <div v-if="selected" class="col-md-10 col-md-offset-1 pokemon text-center">
+    <img v-bind:src="'img/pokemon/'+selected.value+'.png'" alt="">
+    <h3>I choose you {{selected.text}} !</h3>
+  </div>
 </div>
 </body>
 <script>
-    var selectedPokemon;
-    $(document).ready(function () {
-        $("select").change(function () {
-            selectedPokemon = $(this).find(":selected");
-            if (selectedPokemon.val()) {
-                $("div.pokemon")
-                    .html("<img src=\"img/pokemon/" + selectedPokemon.val() + ".png\" alt=\"\">")
-                    .append("<h3>I choose you " + selectedPokemon.text() + " !</h3>");
-            }
-        });
-
+    new Vue({
+        el: '.container',
+        data: {
+            selected: '',
+            options: [
+                {value: '01', text: 'Charmander'},
+                {value: '02', text: 'Bulbasaur'},
+                {value: '03', text: 'Squirtle'},
+                {value: '04', text: 'Pikachu'},
+                {value: '05', text: 'Diglett'},
+                {value: '06', text: 'Geodude'}
+            ]
+        }
     })
-
 </script>
 </html>
